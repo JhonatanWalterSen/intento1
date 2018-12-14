@@ -60,7 +60,8 @@ function writeNewPost(uid, body) {
 
 
 function removePost(postkey) {
-  
+    let uid = firebase.auth().currentUser.uid;
+    let path = '/posts/' + uid + '/' + postkey;
     let path = '/user-posts/' + postKey;
     console.log(path)
     firebase.database().ref(path).remove().then(function () {
@@ -79,29 +80,24 @@ function editPost(postkey) {
     let promise = firebase.database().ref(path).once('value');
 
     promise.then(snapshot => {
-        postKeyUpdate = postkey;
-       
-        let msg = snapshot.val().body;
-        
+        postKeyUpdate = postkey;      
+        let msg = snapshot.val().body;     
         post.value = msg;
         console.log(post)
 
     })
 }
 
-
-
 let post = document.getElementById('post');
 let content = document.getElementById('content');
 const botonpostea = document.getElementById('botonpostea');
 
-
 const div = document.createElement('div');
 function valposteos() {
-    while (div.firstChild) div.removeChild(div.firstChild);
-   let promise = firebase.database().ref().child('user-posts').once('value');
-   console.log(promise)
-    let posteos = promise.then(function (snapshot) {
+   while (div.firstChild) div.removeChild(div.firstChild);
+    let promise = firebase.database().ref().child('user-posts').once('value');
+     console.log(promise)
+      let posteos = promise.then(function (snapshot) {
         Object.keys(snapshot.val()).map(item => {
           
             const p = document.createElement('p');

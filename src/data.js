@@ -28,9 +28,6 @@ function guardaDatos(user) {
         .set(usuario)
 }
 
-
-
-
 const registerFunction = () => {
     if (email1.value !== '' && pass.value !== '' && name.value !== '') {
         if (/^[a-zA-Z0-9._-]+@+[a-z]+.+[a-z]/.test(email1.value)) {
