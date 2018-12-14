@@ -32,47 +32,13 @@
  <title>FreeW</title>
 </head>
 <body>  
-   <!-- encabezado -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">FreeW!</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>    
-          <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-          </form>
-        </div>
-      </nav>
+ 
  <!-- debe ir el class="hiden"  -->
- <div class="container">
- <div id="Init" > 
+ <div id="Init" class="form" > 
     <!-- formulario de registro -->
-    <div class="card" style="width: 18rem;">
-        <img src="../imagenes/logoWeb.png" id="logoWeb"> 
-        <div class="card-body">
-            <form>
-                <div class="form-group">
-                  <label for="exampleInputEmail1">Email address</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                </div>
-                <div class="form-group">
-                  <label for="exampleInputPassword1">Password</label>
-                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                </div>
-                <div class="form-group form-check">
-                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                  <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-              </form>
-        </div>
-      </div>
-   
 
   <div class="containerG" >
-    <a href="" id="link"><img src="" id="imagen"></a> 
+    <a href="" id="link"><img src="../comu.jpeg" id="imagen"></a> 
 
    <div id="prueba">
         
@@ -98,7 +64,7 @@
          </button>
       </div> 
       </div> 
-      <div id="outForm" class="form">
+      <div id="outForm" class="hiden">
          <label>Nombres</label><br>
          <input id="name" type="text" placeholder="nombres"><br>
          <label>Correo Electronico</label><br>
@@ -125,25 +91,27 @@
       </div> 
    </div>      
   </div>
- 
-
-</div> 
 </div>   
-   <!-- <div id="data">
-          <div class="w3-container w3-teal w3-top" style="float:right">
+   <div id="data" class="hiden">
+          <div class="w3-container w3-white w3-top" style="float:right">
             <div class="w3-hover w3-cell-row"> 
                 <button id = "muro" class="w3-button w3-padding-large">General</button>     
                 <button class="w3-button w3-padding-large">Notificaciones</button>
                 <button class="w3-button w3-padding-large">Mensajes</button>
                 <button id="botoncerrar" class="w3-button w3-padding-large" title="Cerrar Sesión">Salir</button> 
+                <form class="form-inline my-2 my-lg-0 search">
+                  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-primary align-right my-2 my-sm-0" type="submit">Search</button>
+                </form>
             </div>
+            
           </div>
                 
     <div class="container2">
      <aside >
      <div class="w3-container w3-content">  
        
-        <img src="../imagenes/logoWeb.png" id="logoWeb">  
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQq3_Vn_SQnqx5Bl7PhNqiABJIY7rKvL_kmOsHV3xNrAXEdt0ST" id="logoWeb">  
           <div class="w3-card w3-round w3-teal">
            <div class="w3-container">
             <h4 class="w3-center">BIENVENIDA</h4>
@@ -199,7 +167,7 @@
 
 </section>  
   </div>
- </div> --> 
+ </div> 
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
    crossorigin="anonymous"></script>
 <!-- Optional JavaScript -->
@@ -223,8 +191,9 @@
    };
    firebase.initializeApp(config);
   </script>
+ 
   <script src='data.js'></script>
-  <script src ='dataMuro.js'></script>
+  <script src='dataMuro.js'></script>
 
 </body>
 </html>

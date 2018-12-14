@@ -34,10 +34,21 @@
 
 <body>
 
-
+  <!-- encabezado -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">FreeW!</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>    
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+    </div>
+  </nav>
   
 
-  <!-- <div id="data">
+  <div id="data">
     <div class="w3-container w3-teal w3-top" style="float:right">
       <div class="w3-hover w3-cell-row">
           <button id='perfil' class="w3-button w3-padding-large">Mi Perfil</button>
@@ -100,7 +111,7 @@
           </div>
         </div>
       </section>
-      </div> -->
+      </div>
       <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
       <!-- Optional JavaScript -->
@@ -124,6 +135,6 @@
         };
         firebase.initializeApp(config);
       </script>
-      <script src='Muro.js'></script>
+      <script src='data.js'></script>
 </body>
 </html>
